@@ -169,6 +169,28 @@
             .header-content { flex-direction: column; }
         }
     </style>
+    <script>
+        // Make entire cards clickable
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all article cards
+            const cards = document.querySelectorAll('.article-card');
+            
+            cards.forEach(card => {
+                // Find the "Read More" link inside this card
+                const link = card.querySelector('a');
+                
+                if (link) {
+                    // Make the entire card clickable
+                    card.addEventListener('click', function(e) {
+                        // Don't trigger if they clicked the actual link
+                        if (e.target.tagName !== 'A') {
+                            window.location.href = link.href;
+                        }
+                    });
+                }
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
