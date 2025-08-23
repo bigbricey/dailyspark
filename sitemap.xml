@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://dailyspark.info/</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- All Articles Page -->
+  <url>
+    <loc>https://dailyspark.info/all-articles.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Original 31 Articles -->
+  <url>
+    <loc>https://dailyspark.info/aca-subsidy-cliff.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/tax-deductions-guide.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/high-deductible-reality.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/f1-student-insurance.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/gig-economy-health.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/december-income-panic.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/spouse-job-trap.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/solo-401k-hack.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/calculate-your-cliff.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/broken-leg-7500.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/quarterly-tax-planning.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/age-60-triple-premium.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/diabetes-trap.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/coinsurance-trap.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/out-of-pocket-myth.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/preventive-care-lie.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/february-problem.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/repayment-trap.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/part-time-trap.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/34000-before-help.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/florida-double-trap.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/january-reset.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/47000-saved-one-call.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/cash-vs-insurance.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/appendectomy-lottery.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/5000-er-bill.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/emergency-room-trap.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/balance-billing-explained.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/air-ambulance-bills.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/bank-account-frozen.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/w2-vs-1099-medical-debt.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/501-credit-cliff.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Articles 32-50: Healthcare Reality Series -->
+  <url>
+    <loc>https://dailyspark.info/s-corp-health-insurance-hack.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/income-timing-for-subsidies.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/retirement-contributions-lower-magi.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/optimal-income-for-aca.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/best-states-self-employed-health-insurance.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/medicaid-expansion-self-employed.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/state-health-programs-freelancers.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/moving-states-health-insurance-savings.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/florida-texas-healthcare-trap.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/10000-deductible-reality.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/never-hit-deductible-trap.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/coinsurance-after-deductible-scam.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/hsra-not-enough-scam.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/january-reset-nightmare.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/emergency-room-bankruptcy.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/prescription-drug-trap.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/network-adequacy-scam.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/out-of-pocket-maximum-lie.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/prior-authorization-death-panel.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/healthcare-bankruptcy-statistics.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Articles 51-52: Latest Additions -->
+  <url>
+    <loc>https://dailyspark.info/health-insurance-tax-deduction-guide.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dailyspark.info/hsa-strategies-self-employed.html</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
