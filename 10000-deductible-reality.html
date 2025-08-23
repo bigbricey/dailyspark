@@ -13,72 +13,149 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.8;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
             color: #333;
-            background: #f5f5f5;
+            background: #f8f9fa;
         }
         
-        .header {
+        /* Header with Full Navigation */
+        header {
+            background: #1a1a2e;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #4fbdba;
+            text-decoration: none;
+        }
+        
+        .logo:hover {
+            color: #3da9a6;
+        }
+        
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #4fbdba;
+        }
+        
+        /* Article Hero Section */
+        .article-hero {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 60px 20px;
+            padding: 3rem 20px;
             text-align: center;
         }
         
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        .container {
+        .article-hero h1 {
+            font-size: 2.5rem;
             max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
+            margin: 0 auto 1rem;
+            line-height: 1.2;
+        }
+        
+        .article-meta {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+        
+        /* Article Container */
+        .article-container {
+            max-width: 800px;
+            margin: -2rem auto 3rem;
+            padding: 3rem;
             background: white;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            position: relative;
         }
         
-        .disclosure {
+        /* FTC Disclosure Box */
+        .disclosure-box {
             background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 15px;
-            margin-bottom: 30px;
-            font-style: italic;
+            border: 1px solid #ffc107;
+            border-radius: 8px;
+            padding: 1.2rem;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
         }
         
+        .disclosure-box strong {
+            color: #856404;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Article Content Styles */
         h2 {
-            color: #667eea;
-            margin: 40px 0 20px 0;
-            font-size: 1.8em;
-            border-bottom: 2px solid #667eea;
-            padding-bottom: 10px;
+            color: #2d3748;
+            font-size: 1.8rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            padding-top: 0.5rem;
         }
         
         h3 {
-            color: #764ba2;
-            margin: 30px 0 15px 0;
-            font-size: 1.4em;
+            color: #2d3748;
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            margin-bottom: 0.8rem;
         }
         
         p {
-            margin-bottom: 20px;
-            text-align: justify;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #4a5568;
+            line-height: 1.8;
         }
         
         ul, ol {
-            margin: 20px 0 20px 40px;
+            margin-bottom: 1.5rem;
+            margin-left: 2rem;
+            color: #4a5568;
         }
         
         li {
-            margin-bottom: 10px;
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+        
+        strong {
+            color: #2d3748;
+            font-weight: 700;
         }
         
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 30px 0;
+            margin: 2rem 0;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         
@@ -98,13 +175,25 @@
             background: #f5f5f5;
         }
         
+        /* CTA Box for Affiliate Product */
         .cta-box {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 30px;
+            padding: 2rem;
             border-radius: 10px;
-            margin: 40px 0;
+            margin: 2.5rem 0;
             text-align: center;
+        }
+        
+        .cta-box h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-box p {
+            color: white;
+            margin-bottom: 1.5rem;
         }
         
         .cta-box a {
@@ -112,32 +201,117 @@
             font-weight: bold;
         }
         
-        .highlight {
-            background: #fffbf0;
-            padding: 20px;
-            border-left: 4px solid #ffc107;
-            margin: 30px 0;
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
         
-        .footer {
-            text-align: center;
-            padding: 40px 20px;
-            background: #333;
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* Highlight Box */
+        .highlight {
+            background: #fef5e7;
+            padding: 1.5rem;
+            border-left: 4px solid #f39c12;
+            margin: 2rem 0;
+            border-radius: 5px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a1a2e;
             color: white;
-            margin-top: 50px;
+            padding: 2rem 20px;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        footer p {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        footer a {
+            color: #4fbdba;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav {
+                margin-top: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+            
+            .article-hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .article-container {
+                padding: 2rem 1.5rem;
+                margin: -1rem 1rem 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            h3 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="header">
+    <!-- Professional Header with Full Navigation -->
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">💡 DailySpark</a>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/all-articles.html">Articles</a>
+                <a href="/#subsidy-cliff">Subsidy Cliff</a>
+                <a href="/#alternatives">Resources</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Article Hero Section -->
+    <div class="article-hero">
         <h1>The $34,000 Reality: How High Deductibles Turn Health "Insurance" Into a Cruel Joke</h1>
-        <p style="font-size: 1.2em;">Why paying $2,000/month for a $10,000 deductible isn't insurance – it's legalized extortion</p>
+        <div class="article-meta">
+            By DailySpark Team | December 2024 | 7 min read
+        </div>
     </div>
     
-    <div class="container">
-        <div class="disclosure">
-            <strong>FTC Disclosure:</strong> This article contains affiliate links. If you make a purchase through these links, I may earn a commission at no extra cost to you. I only recommend products I personally use and believe will add value to my readers. This article is for informational purposes only and should not be considered professional financial or tax advice.
+    <!-- Main Article Container -->
+    <article class="article-container">
+        <!-- FTC Disclosure - REQUIRED for all articles with affiliate links -->
+        <div class="disclosure-box">
+            <strong>Affiliate Disclosure:</strong>
+            This article contains affiliate links. If you sign up through our links, we may earn a commission at no extra cost to you. We only recommend services we genuinely believe can help.
         </div>
+        
         
         <p><strong>Look, here's the brutal truth nobody wants to admit:</strong> I was paying $1,850 per month for health insurance with a $9,500 deductible. When my appendix ruptured, I still had to pay $12,350 out of pocket before my "insurance" covered a single dime. That's $34,550 total for one medical emergency. At what point do we stop calling this insurance and start calling it what it really is – a protection racket?</p>
         
@@ -526,11 +700,16 @@
         <p>The high-deductible trap only works if you stay in it. Your health is too important and your money too valuable to keep feeding a system that doesn't serve you.</p>
         
         <p>It's time to stop playing their game and start playing your own.</p>
-        
-    </div>
+    </article>
     
-    <div class="footer">
-        <p>&copy; 2025 DailySpark. This article is for informational purposes only and should not be considered professional financial or tax advice.</p>
-    </div>
+    <!-- Professional Footer -->
+    <footer>
+        <p>© 2025 DailySpark | Helping the self-employed navigate healthcare</p>
+        <p>
+            <a href="/about.html">About</a> | 
+            <a href="/contact.html">Contact</a> | 
+            <a href="/privacy.html">Privacy</a>
+        </p>
+    </footer>
 </body>
 </html>
