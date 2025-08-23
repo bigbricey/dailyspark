@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/n8ad1f5/public_html/dailyspark.info
+    - /bin/cp -R * $DEPLOYPATH
