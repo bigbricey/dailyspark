@@ -2,4 +2,6 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/n8ad1f5/public_html/dailyspark.info
-    - /bin/cp -R * $DEPLOYPATH
+    - /bin/cp -R ./* $DEPLOYPATH
+    - /bin/cp .cpanel.yml $DEPLOYPATH
+    - /bin/cp .htaccess $DEPLOYPATH 2>/dev/null || :
