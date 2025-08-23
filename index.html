@@ -86,14 +86,8 @@
             border-radius: 3px;
             font-size: 0.8em;
             font-weight: bold;
-        }
-        .status-ready {
             background: #d4edda;
             color: #155724;
-        }
-        .status-coming {
-            background: #f8d7da;
-            color: #721c24;
         }
         .cta-section {
             background: white;
@@ -115,6 +109,28 @@
         .cta-button:hover {
             background: #2980b9;
         }
+        .stats-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .stat {
+            font-size: 2em;
+            color: #3498db;
+            font-weight: bold;
+        }
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+        }
     </style>
 </head>
 <body>
@@ -128,132 +144,236 @@
             <h2>⚠️ Warning: The Subsidy Cliff Returns in 2026</h2>
             <p>Enhanced ACA subsidies expire December 31, 2025. If you're self-employed and make over $62,600 (single) or $84,750 (couple), you could lose $11,000+ in health insurance subsidies overnight. <strong>Start planning NOW.</strong></p>
         </div>
+
+        <div class="stats-box">
+            <h2>The Crisis in Numbers</h2>
+            <div class="stats-grid">
+                <div>
+                    <div class="stat">$11,479</div>
+                    <div class="stat-label">Lost from $1 extra income</div>
+                </div>
+                <div>
+                    <div class="stat">$7,500</div>
+                    <div class="stat-label">Average deductible before coverage</div>
+                </div>
+                <div>
+                    <div class="stat">47%</div>
+                    <div class="stat-label">Gig workers uninsured</div>
+                </div>
+                <div>
+                    <div class="stat">$181</div>
+                    <div class="stat-label">You earn per referral</div>
+                </div>
+            </div>
+        </div>
+        
+        <h2 style="color: white; text-align: center; margin-top: 40px;">📚 All 25 Articles - Complete Collection</h2>
         
         <div class="articles-grid">
             <div class="article-card">
-                <span class="status-badge status-ready">LIVE</span>
+                <span class="status-badge">⭐ MUST READ</span>
                 <h2>The $1 Mistake That Could Cost You $11,479</h2>
                 <p>How the ACA subsidy cliff works and why that one extra dollar of income could destroy your finances in 2026.</p>
                 <a href="aca-subsidy-cliff.html">Read Full Article →</a>
             </div>
             
             <div class="article-card">
-                <span class="status-badge status-ready">LIVE</span>
+                <span class="status-badge">💰 TAX SAVINGS</span>
                 <h2>Self-Employed Health Insurance Tax Deduction</h2>
                 <p>The above-the-line deduction that could save you thousands. Most people don't know about it or mess it up.</p>
                 <a href="tax-deductions-guide.html">Read Full Article →</a>
             </div>
             
             <div class="article-card">
-                <span class="status-badge status-ready">LIVE</span>
+                <span class="status-badge">😱 REALITY CHECK</span>
                 <h2>I Paid $7,500 Before Insurance Covered Anything</h2>
                 <p>The high-deductible nightmare nobody warns you about. Real bills, real numbers, real alternatives.</p>
                 <a href="high-deductible-reality.html">Read Full Article →</a>
             </div>
             
             <div class="article-card">
-                <span class="status-badge status-coming">Coming Soon</span>
-                <h2>F-1 Students: Your Insurance Options Explained</h2>
+                <span class="status-badge">🎓 STUDENTS</span>
+                <h2>F-1 Students: $47,000 Bill First Month in America</h2>
                 <p>University plans vs. marketplace coverage - what international students need to know about health insurance.</p>
-                <a href="#">Article Coming Soon</a>
+                <a href="f1-student-insurance.html">Read Full Article →</a>
             </div>
             
             <div class="article-card">
-                <span class="status-badge status-coming">Coming Soon</span>
-                <h2>Gig Economy Health Insurance Survival Guide</h2>
-                <p>Uber, DoorDash, freelance - how to get coverage when you don't have a traditional job.</p>
-                <a href="#">Article Coming Soon</a>
+                <span class="status-badge">🚗 GIG WORKERS</span>
+                <h2>DoorDash Full-Time But Zero Benefits</h2>
+                <p>The gig economy health insurance crisis. How drivers, delivery workers, and freelancers can actually get coverage.</p>
+                <a href="gig-economy-health.html">Read Full Article →</a>
             </div>
             
             <div class="article-card">
-                <span class="status-badge status-coming">Coming Soon</span>
+                <span class="status-badge">🚨 EMERGENCY</span>
                 <h2>December Income Panic: Last-Minute Strategies</h2>
                 <p>It's December and you're about to hit the subsidy cliff. Emergency strategies that actually work.</p>
-                <a href="#">Article Coming Soon</a>
+                <a href="december-income-panic.html">Read Full Article →</a>
             </div>
             
             <div class="article-card">
-                <span class="status-badge status-coming">Coming Soon</span>
+                <span class="status-badge">👫 COUPLES</span>
                 <h2>The Spouse Job Trap That Costs Thousands</h2>
                 <p>How your spouse's employer coverage can disqualify you from tax deductions you desperately need.</p>
-                <a href="#">Article Coming Soon</a>
+                <a href="spouse-job-trap.html">Read Full Article →</a>
             </div>
             
             <div class="article-card">
-                <span class="status-badge status-coming">Coming Soon</span>
+                <span class="status-badge">🛡️ STRATEGY</span>
                 <h2>Solo 401(k): Your Secret Weapon Against the Cliff</h2>
                 <p>How to use retirement contributions to stay under income limits and keep your subsidies.</p>
-                <a href="#">Article Coming Soon</a>
+                <a href="solo-401k-hack.html">Read Full Article →</a>
             </div>
             
             <div class="article-card">
-                <span class="status-badge status-coming">Coming Soon</span>
+                <span class="status-badge">🏥 ER BILLS</span>
                 <h2>$5,000 ER Bill for 3 Hours and Tylenol</h2>
                 <p>My actual emergency room bill breakdown and how to fight ridiculous hospital charges.</p>
-                <a href="#">Article Coming Soon</a>
+                <a href="5000-er-bill.html">Read Full Article →</a>
             </div>
             
             <div class="article-card">
-                <span class="status-badge status-coming">Coming Soon</span>
+                <span class="status-badge">⚠️ WARNING</span>
                 <h2>Part-Time Job? You Might Lose Everything</h2>
                 <p>How taking a part-time job for "stability" can cost you thousands in lost subsidies.</p>
-                <a href="#">Article Coming Soon</a>
+                <a href="part-time-trap.html">Read Full Article →</a>
             </div>
             
             <div class="article-card">
-                <span class="status-badge status-coming">Coming Soon</span>
+                <span class="status-badge">🌴 FLORIDA</span>
                 <h2>Florida's Double Trap: No Medicaid + High Premiums</h2>
                 <p>Why Florida is the worst state for self-employed health insurance and what to do about it.</p>
-                <a href="#">Article Coming Soon</a>
+                <a href="florida-double-trap.html">Read Full Article →</a>
             </div>
             
             <div class="article-card">
-                <span class="status-badge status-coming">Coming Soon</span>
+                <span class="status-badge">👴 AGE 50+</span>
                 <h2>Age 60? Your Premium Just Tripled</h2>
                 <p>The age rating cliff that nobody talks about - how turning 60 destroys your insurance costs.</p>
-                <a href="#">Article Coming Soon</a>
+                <a href="age-60-triple-premium.html">Read Full Article →</a>
             </div>
             
             <div class="article-card">
-                <span class="status-badge status-coming">Coming Soon</span>
+                <span class="status-badge">💸 IRS TRAP</span>
                 <h2>The Repayment Trap: Owing $12,000 to the IRS</h2>
                 <p>What happens when you have to repay advance premium tax credits - and how to avoid it.</p>
-                <a href="#">Article Coming Soon</a>
+                <a href="repayment-trap.html">Read Full Article →</a>
             </div>
             
             <div class="article-card">
-                <span class="status-badge status-coming">Coming Soon</span>
+                <span class="status-badge">🧮 CALCULATOR</span>
                 <h2>Calculate Your Cliff: The Numbers You Need</h2>
                 <p>Exact income limits for 2025 and 2026 - know your danger zone down to the dollar.</p>
-                <a href="#">Article Coming Soon</a>
+                <a href="calculate-your-cliff.html">Read Full Article →</a>
             </div>
             
             <div class="article-card">
-                <span class="status-badge status-coming">Coming Soon</span>
+                <span class="status-badge">📊 TAX PLANNING</span>
                 <h2>Quarterly Tax Planning to Avoid the Cliff</h2>
                 <p>How to adjust estimated taxes throughout the year to stay under limits.</p>
-                <a href="#">Article Coming Soon</a>
+                <a href="quarterly-tax-planning.html">Read Full Article →</a>
+            </div>
+            
+            <div class="article-card">
+                <span class="status-badge">💔 POVERTY</span>
+                <h2>Make $34,000? You're Too Rich for Help</h2>
+                <p>The cruel reality of being "too rich" for Medicaid but too poor for subsidized insurance.</p>
+                <a href="34000-before-help.html">Read Full Article →</a>
+            </div>
+            
+            <div class="article-card">
+                <span class="status-badge">🩺 CHRONIC</span>
+                <h2>Diabetic? Your Insurance Just Became Worthless</h2>
+                <p>How high-deductible plans make managing chronic conditions impossible for the self-employed.</p>
+                <a href="diabetes-trap.html">Read Full Article →</a>
+            </div>
+            
+            <div class="article-card">
+                <span class="status-badge">🦴 INJURY</span>
+                <h2>Broken Leg Cost Me $7,500 Despite "Good" Insurance</h2>
+                <p>The reality of deductibles, coinsurance, and out-of-pocket maximums when you actually need care.</p>
+                <a href="broken-leg-7500.html">Read Full Article →</a>
+            </div>
+            
+            <div class="article-card">
+                <span class="status-badge">🎰 LOTTERY</span>
+                <h2>The Appendectomy Lottery: $8,000 to $63,000</h2>
+                <p>Same procedure, wildly different prices. How hospital billing is literally gambling with your life savings.</p>
+                <a href="appendectomy-lottery.html">Read Full Article →</a>
+            </div>
+            
+            <div class="article-card">
+                <span class="status-badge">💵 CASH PAY</span>
+                <h2>Cash Price: $400. Insurance Price: $1,200. Wait, What?</h2>
+                <p>Why paying cash is often cheaper than using insurance - and how to use this to your advantage.</p>
+                <a href="cash-vs-insurance.html">Read Full Article →</a>
+            </div>
+            
+            <div class="article-card">
+                <span class="status-badge">📅 FEBRUARY</span>
+                <h2>The February Problem Nobody Warns You About</h2>
+                <p>Why February healthcare costs can destroy your entire year's budget - the short month trap.</p>
+                <a href="february-problem.html">Read Full Article →</a>
+            </div>
+            
+            <div class="article-card">
+                <span class="status-badge">🔄 JANUARY</span>
+                <h2>January 1st: Your Deductible Reset to Zero</h2>
+                <p>The annual reset nightmare - why January medical emergencies are financial disasters.</p>
+                <a href="january-reset.html">Read Full Article →</a>
+            </div>
+            
+            <div class="article-card">
+                <span class="status-badge">🎭 LIES</span>
+                <h2>The "Free" Preventive Care Lie</h2>
+                <p>How insurance companies turn "free" annual checkups into thousand-dollar bills.</p>
+                <a href="preventive-care-lie.html">Read Full Article →</a>
+            </div>
+            
+            <div class="article-card">
+                <span class="status-badge">📈 COINSURANCE</span>
+                <h2>Met Your Deductible? You Still Owe 40%</h2>
+                <p>The coinsurance trap that keeps bleeding you dry even after hitting your deductible.</p>
+                <a href="coinsurance-trap.html">Read Full Article →</a>
+            </div>
+            
+            <div class="article-card">
+                <span class="status-badge">🎯 MAXIMUM</span>
+                <h2>Out-of-Pocket Maximum: The Myth That Bankrupts</h2>
+                <p>Why your "maximum" isn't really a maximum - the loopholes that can still destroy you.</p>
+                <a href="out-of-pocket-myth.html">Read Full Article →</a>
             </div>
         </div>
         
         <div class="cta-section">
-            <h2>Looking for an Alternative to Traditional Insurance?</h2>
-            <p>If you're tired of high deductibles, subsidy cliffs, and insurance that doesn't actually cover anything until you've spent $10,000+, you're not alone.</p>
-            <p>Many self-employed people are switching to direct primary care memberships like <strong>MyPhysicianPlan</strong> for their everyday healthcare needs.</p>
+            <h2>🚀 Ready for a Better Solution?</h2>
+            <p>If you're tired of:</p>
             <ul style="text-align: left; max-width: 600px; margin: 20px auto;">
-                <li>No deductibles or copays</li>
-                <li>Unlimited primary care visits</li>
-                <li>Predictable monthly costs</li>
-                <li>No income restrictions or subsidy cliffs</li>
-                <li>Perfect for self-employed and freelancers</li>
+                <li>High deductibles you'll never meet</li>
+                <li>Subsidy cliffs that punish success</li>
+                <li>Insurance that doesn't actually cover anything</li>
+                <li>Choosing between health and rent</li>
             </ul>
-            <a href="https://www.awin1.com/cread.php?awinmid=114664&awinaffid=2516221&ued=https://myphysicianplan.com" class="cta-button">Learn More About MyPhysicianPlan →</a>
+            
+            <h3>MyPhysicianPlan: Healthcare That Actually Works</h3>
+            <p>Join thousands of self-employed Americans who've switched to direct primary care:</p>
+            <ul style="text-align: left; max-width: 600px; margin: 20px auto;">
+                <li>✅ No deductibles or copays</li>
+                <li>✅ Unlimited primary care visits</li>
+                <li>✅ 24/7 access to your doctor</li>
+                <li>✅ Prescription discounts included</li>
+                <li>✅ No income restrictions</li>
+                <li>✅ Plans from just $75/month</li>
+            </ul>
+            <a href="https://www.awin1.com/cread.php?awinmid=114664&awinaffid=2516221&ued=https://myphysicianplan.com" class="cta-button">Get Your Free Quote from MyPhysicianPlan →</a>
             <p style="font-size: 0.9em; color: #666; margin-top: 20px;">Not insurance, but actual healthcare you can afford and use.</p>
         </div>
         
         <footer style="text-align: center; margin-top: 50px; color: white;">
             <p>© 2025 DailySpark | Helping the self-employed navigate healthcare</p>
             <p style="font-size: 0.9em;">This site contains affiliate links. We may earn a commission if you sign up through our links, at no extra cost to you.</p>
+            <p style="font-size: 0.9em;">Every article is based on real experiences and actual bills. We're all in this together.</p>
         </footer>
     </div>
 </body>
