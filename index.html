@@ -184,7 +184,8 @@
                     card.addEventListener('click', function(e) {
                         // Don't trigger if they clicked the actual link
                         if (e.target.tagName !== 'A') {
-                            window.location.href = link.href;
+                            // Open in new tab (what you called "new window")
+                            window.open(link.href, '_blank');
                         }
                     });
                 }
@@ -223,7 +224,7 @@
                     <span class="category">MUST READ</span>
                     <h3>The $1 Mistake That Could Cost You $11,479</h3>
                     <p>How the ACA subsidy cliff works and why one extra dollar of income could destroy your finances in 2026.</p>
-                    <a href="/aca-subsidy-cliff.html">Read More →</a>
+                    <a href="/aca-subsidy-cliff.html" target="_blank">Read More →</a>
                 </div>
             </div>
             
@@ -232,7 +233,7 @@
                     <span class="category">TAX SAVINGS</span>
                     <h3>Self-Employed Health Insurance Tax Deduction</h3>
                     <p>The above-the-line deduction that could save you thousands. Most people mess it up.</p>
-                    <a href="/tax-deductions-guide.html">Read More →</a>
+                    <a href="/tax-deductions-guide.html" target="_blank">Read More →</a>
                 </div>
             </div>
             
@@ -241,7 +242,7 @@
                     <span class="category">REALITY CHECK</span>
                     <h3>I Paid $7,500 Before Insurance Covered Anything</h3>
                     <p>The high-deductible nightmare nobody warns you about. Real bills, real alternatives.</p>
-                    <a href="/high-deductible-reality.html">Read More →</a>
+                    <a href="/high-deductible-reality.html" target="_blank">Read More →</a>
                 </div>
             </div>
             
@@ -250,7 +251,7 @@
                     <span class="category">STUDENTS</span>
                     <h3>F-1 Student: $47,000 Bill First Month</h3>
                     <p>What international students need to know about US health insurance traps.</p>
-                    <a href="/f1-student-insurance.html">Read More →</a>
+                    <a href="/f1-student-insurance.html" target="_blank">Read More →</a>
                 </div>
             </div>
             
@@ -259,7 +260,7 @@
                     <span class="category">GIG WORKERS</span>
                     <h3>DoorDash Full-Time But Zero Benefits</h3>
                     <p>How delivery drivers and gig workers can actually get affordable coverage.</p>
-                    <a href="/gig-economy-health.html">Read More →</a>
+                    <a href="/gig-economy-health.html" target="_blank">Read More →</a>
                 </div>
             </div>
             
@@ -268,7 +269,7 @@
                     <span class="category">EMERGENCY</span>
                     <h3>December Income Panic</h3>
                     <p>Last-minute strategies when you're about to hit the subsidy cliff.</p>
-                    <a href="/december-income-panic.html">Read More →</a>
+                    <a href="/december-income-panic.html" target="_blank">Read More →</a>
                 </div>
             </div>
         </div>
