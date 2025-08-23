@@ -13,226 +13,128 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: #f8f9fa;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
         }
         
-        /* Header Navigation - Purple Gradient Like Homepage */
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1rem 0;
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 1.8rem;
+        nav a {
+            color: #667eea;
+            text-decoration: none;
             font-weight: bold;
-            text-decoration: none;
-            color: white;
+            font-size: 1.2rem;
         }
         
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-        
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            transition: opacity 0.3s;
-        }
-        
-        .nav-links a:hover {
-            opacity: 0.8;
-        }
-        
-        /* Main Article Container */
         .article-container {
             max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            min-height: 100vh;
-            box-shadow: 0 0 20px rgba(0,0,0,0.05);
-        }
-        
-        /* FTC Disclosure - REQUIRED BY LAW! */
-        .disclosure-box {
-            background: #fff3cd;
-            border: 2px solid #ffc107;
-            padding: 1rem;
-            margin: 0;
-            font-size: 0.9rem;
-        }
-        
-        .disclosure-box strong {
-            color: #856404;
-        }
-        
-        /* Article Content */
-        article {
+            margin: 2rem auto;
             padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
         }
         
         h1 {
-            color: #2c3e50;
+            color: #2d3748;
             font-size: 2.5rem;
             line-height: 1.2;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
         
-        .date, .article-meta {
-            color: #666;
-            font-size: 0.9rem;
+        .author-date {
+            color: #718096;
+            margin-bottom: 2rem;
             padding-bottom: 1rem;
-            border-bottom: 1px solid #eee;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .disclosure {
+            background: #f7fafc;
+            border-left: 4px solid #667eea;
+            padding: 1rem;
             margin-bottom: 2rem;
             font-style: italic;
         }
         
         h2 {
-            color: #667eea;
+            color: #2d3748;
             font-size: 1.8rem;
-            margin: 2.5rem 0 1rem;
-            padding-top: 1rem;
-        }
-        
-        h3 {
-            color: #34495e;
-            font-size: 1.3rem;
-            margin: 2rem 0 0.5rem;
-        }
-        
-        p {
-            margin-bottom: 1.2rem;
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-        
-        /* Keep existing boxes from original */
-        .warning-box {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 20px;
-            margin: 30px 0;
-        }
-        
-        .scenario-box {
-            background: #f5f5f5;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 5px;
-        }
-        
-        .damage {
-            color: #d32f2f;
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-        
-        .cta-section {
-            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
-            padding: 30px;
-            margin: 40px 0;
-            border-radius: 10px;
-            border: 2px solid #667eea;
-        }
-        
-        /* Lists */
-        ul, ol {
-            margin: 1rem 0 1rem 2rem;
-        }
-        
-        li {
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-        
-        /* Links */
-        a {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        a:hover {
-            text-decoration: underline;
-        }
-        
-        /* Footer */
-        footer {
-            background: #2c3e50;
-            color: white;
-            padding: 3rem 0;
-            text-align: center;
-        }
-        
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .footer-links {
+            margin-top: 2rem;
             margin-bottom: 1rem;
         }
         
-        .footer-links a {
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #4a5568;
+        }
+        
+        .cta-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            margin: 0 1rem;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .cta-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-box a {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 1rem 2rem;
+            border-radius: 5px;
             text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: transform 0.3s;
         }
         
-        hr {
-            margin: 40px 0;
-            border: none;
-            border-top: 1px solid #ddd;
+        .cta-box a:hover {
+            transform: scale(1.05);
         }
         
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            h1 { font-size: 1.8rem; }
-            .nav-links { display: none; }
-            article { padding: 1rem; }
+        .highlight {
+            background: #fef5e7;
+            padding: 1.5rem;
+            border-left: 4px solid #f39c12;
+            margin: 2rem 0;
+        }
+        
+        strong {
+            color: #2d3748;
+            font-weight: 700;
         }
     </style>
 </head>
 <body>
-    <!-- Professional Header with Purple Gradient -->
-    <header class="header">
-        <div class="header-content">
-            <a href="/" class="logo">💡 DailySpark</a>
-            <nav class="nav-links">
-                <a href="/">Home</a>
-                <a href="/articles.html">Articles</a>
-                <a href="/about.html">About</a>
-                <a href="/contact.html">Contact</a>
-            </nav>
-        </div>
-    </header>
-
-    <div class="article-container">
-        <!-- FTC REQUIRED DISCLOSURE - MUST BE AT TOP! -->
-        <div class="disclosure-box">
-            <strong>Affiliate Disclosure:</strong> This article contains affiliate links to products we recommend. If you click on these links and make a purchase, we may earn a commission at no additional cost to you. We only recommend products and services we believe will add value to our readers. <a href="/disclosure.html">Read our full disclosure policy</a>.
-        </div>
+    <nav>
+        <a href="index.html" target="_blank">← Back to DailySpark</a>
+    </nav>
+    
+    <article class="article-container">
         
-        <article>
 <h1>The $1 Mistake That Could Cost You $11,479: A Self-Employed Health Insurance Warning</h1>
+
+<div class="author-date">
+<strong>By DailySpark Team</strong> | December 2024 | 7 min read
+</div>
         
         <p class="date">Last updated: January 2025</p>
         
@@ -401,25 +303,7 @@
         <p><em>Have you been hit by the subsidy cliff? Are you worried about 2026? Share your story in the comments below. We're all in this together.</em></p>
         
         <p><strong>Disclaimer:</strong> <em>This article is for informational purposes only and should not be considered tax or legal advice. Consult with a qualified CPA or tax professional about your specific situation.</em></p>
-        </article>
-    </div>
-    
-    <!-- Professional Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="/">Home</a>
-                <a href="/articles.html">All Articles</a>
-                <a href="/about.html">About Us</a>
-                <a href="/privacy.html">Privacy Policy</a>
-                <a href="/disclosure.html">Affiliate Disclosure</a>
-                <a href="/contact.html">Contact</a>
-            </div>
-            <p>© 2025 DailySpark | Empowering Self-Employed Americans with Better Healthcare Options</p>
-            <p style="font-size: 0.9rem; margin-top: 1rem; opacity: 0.8;">
-                DailySpark participates in affiliate programs and may earn commissions from qualifying purchases.
-            </p>
-        </div>
-    </footer>
+        
+    </article>
 </body>
 </html>
