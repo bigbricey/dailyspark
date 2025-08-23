@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Articles - Health Insurance for Self-Employed - DailySpark</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif; line-height: 1.6; color: #333; }
+        
+        /* Header */
+        header {
+            background: #1a1a2e;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #4fbdba;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+        }
+        nav a:hover { color: #4fbdba; }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        /* Articles Grid */
+        .articles-section {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 20px;
+        }
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #1a1a2e;
+        }
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .article-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        .article-card-content {
+            padding: 1.5rem;
+        }
+        .article-card h3 {
+            color: #1a1a2e;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        .article-card p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+        .article-card a {
+            color: #4fbdba;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .article-card a:hover { text-decoration: underline; }
+        
+        /* Category badges */
+        .category {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: #4fbdba;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 2rem 20px;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        footer a { color: #4fbdba; text-decoration: none; }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            nav a { display: block; margin: 0.5rem 0; }
+            .header-content { flex-direction: column; }
+        }
+    </style>
+    <script>
+        // Make entire cards clickable
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all article cards
+            const cards = document.querySelectorAll('.article-card');
+            
+            cards.forEach(card => {
+                // Find the "Read More" link inside this card
+                const link = card.querySelector('a');
+                
+                if (link) {
+                    // Make the entire card clickable
+                    card.addEventListener('click', function(e) {
+                        // Don't trigger if they clicked the actual link
+                        if (e.target.tagName !== 'A') {
+                            // Open in new tab
+                            window.open(link.href, '_blank');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">💡 DailySpark</div>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/">Articles</a>
+                <a href="#subsidy-cliff">Subsidy Cliff</a>
+                <a href="#alternatives">Alternatives</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="hero">
+        <h1>All Articles - Health Insurance for Self-Employed</h1>
+        <p>Complete collection of health insurance information, real experiences, and money-saving strategies for freelancers, gig workers, and small business owners.</p>
+    </div>
+    
+    <div class="articles-section" id="articles">
+        <h2 class="section-title">All 31 Articles</h2>
+        <div class="articles-grid">
+            <div class="article-card">
+                <div class="article-card-content">
+                    <span class="category">MUST READ</span>
+                    <h3>The $1 Mistake That Could Cost You $11,479</h3>
+                    <p>How earning just one dollar too much can destroy your health insurance subsidies. Critical information f...</p>
+                    <a href="/aca-subsidy-cliff.html" target="_blank">Read More →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-card-content">
+                    <span class="category">TAX SAVINGS</span>
+                    <h3>Self-Employed Health Insurance Tax Deduction Guide - Save Thousands</h3>
+                    <p>Complete guide to the self-employed health insurance tax deduction. Learn how to save thousands on tax...</p>
+                    <a href="/tax-deductions-guide.html" target="_blank">Read More →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-card-content">
+                    <span class="category">REALITY CHECK</span>
+                    <h3>I Paid $7,500 Before Insurance Covered a Single Doctor Visit</h3>
+                    <p>The brutal reality of high-deductible health plans for self-employed. How I paid $12,060 before insura...</p>
+                    <a href="/high-deductible-reality.html" target="_blank">Read More →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-card-content">
+                    <span class="category">STUDENTS</span>
+                    <h3>F-1 Student Health Insurance Horror - $47,000 Bill First Month</h3>
+                    <p>Complete guide to health insurance for F-1 international students. Avoid university insurance traps a...</p>
+                    <a href="/f1-student-insurance.html" target="_blank">Read More →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-card-content">
+                    <span class="category">GIG WORKERS</span>
+                    <h3>DoorDash Full-Time But Zero Benefits</h3>
+                    <p>I made $67,000 driving for DoorDash and Uber last year.</p>
+                    <a href="/gig-economy-health.html" target="_blank">Read More →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-card-content">
+                    <span class="category">EMERGENCY</span>
+                    <h3>It's December 15th and I'm $3,000 Away from Losing My Health Insurance</h3>
+                    <p>My accountant just called with the worst possible news.</p>
+                    <a href="/december-income-panic.html" target="_blank">Read More →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-card-content">
+                    <span class="category">SURPRISE BILLS</span>
+                    <h3>The Emergency Room Trap: Why 1 in 4 ER Visits Ends in Surprise Bills</h3>
+                    <p>Even at in-network hospitals, 25% of emergency room visits result in out-of-network charges. Learn how...</p>
+                    <a href="/emergency-room-trap.html" target="_blank">Read More →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-card-content">
+                    <span class="category">MUST KNOW</span>
+                    <h3>Balance Billing Explained: The $7,900 Surprise Hidden in Your Medical Bills</h3>
+                    <p>Understand balance billing - how a $200 procedure becomes a $7,900 bill. Real examples, legal protect...</p>
+                    <a href="/balance-billing-explained.html" target="_blank">Read More →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-card-content">
+                    <span class="category">EMERGENCY</span>
+                    <h3>Air Ambulance Bills: The $50,000 Surprise That Can Bankrupt You</h3>
+                    <p>Air ambulance rides average $36,000 and can exceed $100,000. Learn your rights, protections, and alte...</p>
+                    <a href="/air-ambulance-bills.html" target="_blank">Read More →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-card-content">
+                    <span class="category">BUSINESS KILLER</span>
+                    <h3>Bank Account Frozen: The $5,000 Medical Bill That Killed My Business</h3>
+                    <p>How one medical bill can freeze your business bank account overnight and destroy your livelihood. Cri...</p>
+                    <a href="/bank-account-frozen.html" target="_blank">Read More →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-card-content">
+                    <span class="category">FREELANCERS</span>
+                    <h3>W2 vs 1099: Why Medical Debt Hits Freelancers 10x Harder</h3>
+                    <p>The shocking truth about how medical debt destroys self-employed people while W2 employees get protec...</p>
+                    <a href="/w2-vs-1099-medical-debt.html" target="_blank">Read More →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-card-content">
+                    <span class="category">CREDIT TRAP</span>
+                    <h3>The $501 Credit Score Cliff That Kills Freelance Businesses</h3>
+                    <p>How a $2 difference in medical debt can destroy your business credit and end your freelance career. T...</p>
+                    <a href="/501-credit-cliff.html" target="_blank">Read More →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-card-content">
+                    <span class="category">SPOUSE TRAP</span>
+                    <h3>My Wife Got a $15/Hour Job. It Cost Us $18,000 in Health Insurance.</h3>
+                    <p>The email from her new employer seemed like a blessing.</p>
+                    <a href="/spouse-job-trap.html" target="_blank">Read More →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-card-content">
+                    <span class="category">RETIREMENT HACK</span>
+                    <h3>The Solo 401(k) Saved Me $11,000 in Health Insurance</h3>
+                    <p>My accountant called:</p>
+                    <a href="/solo-401k-hack.html" target="_blank">Read More →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-card-content">
+                    <span class="category">ER NIGHTMARE</span>
+                    <h3>"$5,000 Emergency Room Bill AFTER Insurance" - The Self-Employed Healthcare Scam</h3>
+                    <p>By 3 AM, I couldn't breathe properly. My left arm was tingling. Classic heart attack symptoms.</p>
+                    <a href="/5000-er-bill.html" target="_blank">Read More →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-card-content">
+                    <span class="category">INJURY HORROR</span>
+                    <h3>Broken Leg, $7,500 Bill, Insurance Paid Nothing</h3>
+                    <p>The skateboard ramp looked smaller from the ground.</p>
+                    <a href="/broken-leg-7500.html" target="_blank">Read More →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-card-content">
+                    <span class="category">CALCULATOR</span>
+                    <h3>Your Exact 2026 Subsidy Cliff Calculator</h3>
+                    <p>I just spent three hours on the phone with the marketplace, the IRS, and two insurance brokers tryin...</p>
+                    <a href="/calculate-your-cliff.html" target="_blank">Read More →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-card-content">
+                    <span class="category">AGING CRISIS</span>
+                    <h3>Age 60 and Self-Employed? Your Health Insurance Is About to Triple in 2026</h3>
+                    <p>I just got off the phone with Tom, a 60-year-old freelance architect in Jacksonville. He's been payi...</p>
+                    <a href="/age-60-triple-premium.html" target="_blank">Read More →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-card-content">
+                    <span class="category">DEDUCTIBLE HELL</span>
+                    <h3>$34,000 Before Insurance Helps: The Math That Made Me Quit Self-Employment</h3>
+                    <p>I did the math seventeen times. Used three different calculators. Called my insurance company twice.</p>
+                    <a href="/34000-before-help.html" target="_blank">Read More →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-card-content">
+                    <span class="category">SURGERY SHOCK</span>
+                    <h3>The Appendectomy Lottery: You Pay $14,600, Insurance Pays $18,400</h3>
+                    <p>Wednesday, 6 AM. Waking up from emergency surgery minus one appendix.</p>
+                    <a href="/appendectomy-lottery.html" target="_blank">Read More →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-card-content">
+                    <span class="category">PRICE COMPARISON</span>
+                    <h3>Cash Price vs Insurance Price: When Uninsured People Pay Less Than You</h3>
+                    <p>Discover why paying cash often costs less than using insurance and how to negotiate better medical p...</p>
+                    <a href="/cash-vs-insurance.html" target="_blank">Read More →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-card-content">
+                    <span class="category">COINSURANCE</span>
+                    <h3>Coinsurance After Deductible: The 20% That Feels Like 200%</h3>
+                    <p>Understanding coinsurance and why it can bankrupt you even after meeting your deductible. Real examp...</p>
+                    <a href="/coinsurance-trap.html" target="_blank">Read More →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-card-content">
+                    <span class="category">CHRONIC ILLNESS</span>
+                    <h3>The Diabetes Trap: $12,000 Annual Cost, Zero Insurance Help</h3>
+                    <p>Those eight words changed everything. Not just my health. My finances. My future. My ability to stay...</p>
+                    <a href="/diabetes-trap.html" target="_blank">Read More →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-card-content">
+                    <span class="category">SEASONAL PROBLEM</span>
+                    <h3>The February Problem: Already Broke from January's Deductible</h3>
+                    <p>Insurance paid: $6,000 (after I met the $10,000 deductible).</p>
+                    <a href="/february-problem.html" target="_blank">Read More →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-card-content">
+                    <span class="category">STATE TRAP</span>
+                    <h3>Florida's Healthcare Double Trap: Too Poor for Help, Too Rich for Subsidies</h3>
+                    <p>I live in Florida. The...</p>
+                    <a href="/florida-double-trap.html" target="_blank">Read More →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-card-content">
+                    <span class="category">NEW YEAR RESET</span>
+                    <h3>January 1st Reset: How Deductibles Destroy Year-End Medical Care</h3>
+                    <p>December 15th, 2023. Finally hit my $10,000 deductible after 11 months of medical bills.</p>
+                    <a href="/january-reset.html" target="_blank">Read More →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-card-content">
+                    <span class="category">MAXIMUM MYTH</span>
+                    <h3>The Out-of-Pocket Maximum Myth: $15,000 Is Not Your Real Limit</h3>
+                    <p>Why out-of-pocket maximums don't protect you like you think they do. Hidden costs that don't count t...</p>
+                    <a href="/out-of-pocket-myth.html" target="_blank">Read More →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-card-content">
+                    <span class="category">PART-TIME TRAP</span>
+                    <h3>I Took a Part-Time Job for "Extra Income" - It Cost Me $14,000</h3>
+                    <p>How taking on part-time work can destroy your health insurance subsidies and cost you thousands. Rea...</p>
+                    <a href="/part-time-trap.html" target="_blank">Read More →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-card-content">
+                    <span class="category">PREVENTIVE LIE</span>
+                    <h3>The Preventive Care Lie: What's Actually Free vs What Bankrupts You</h3>
+                    <p>The truth about "free" preventive care and the hidden costs that can destroy your budget. What's act...</p>
+                    <a href="/preventive-care-lie.html" target="_blank">Read More →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-card-content">
+                    <span class="category">TAX PLANNING</span>
+                    <h3>Quarterly Taxes + Subsidy Cliff = The Perfect Storm</h3>
+                    <p>Here's a fun way to destroy your finances: Pay your Q4 estimated taxes in January, push your bank a...</p>
+                    <a href="/quarterly-tax-planning.html" target="_blank">Read More →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-card-content">
+                    <span class="category">IRS BILL</span>
+                    <h3>The $10,800 IRS Bill Nobody Warns You About Until April</h3>
+                    <p>Picture this: It's April 2027. You're doing your taxes for 2026. Everything looks good until your t...</p>
+                    <a href="/repayment-trap.html" target="_blank">Read More →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-card-content">
+                    <span class="category">SUCCESS STORY</span>
+                    <h3>How I Avoided $47,000 in Medical Bills With One Simple Phone Call</h3>
+                    <p>The No Surprises Act helpline saved me $47,000. Here's the exact script I used and how you can do i...</p>
+                    <a href="/47000-saved-one-call.html" target="_blank">Read More →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2025 DailySpark | Helping the self-employed navigate healthcare</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">
+            <a href="/about.html">About</a> | 
+            <a href="/contact.html">Contact</a> | 
+            <a href="/privacy.html">Privacy</a>
+        </p>
+    </footer>
+</body>
+</html>
