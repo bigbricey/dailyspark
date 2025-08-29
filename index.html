@@ -3,78 +3,385 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DailySpark - Under Construction</title>
+    <title>DailySpark - Healthcare Savings for the Self-Employed</title>
+    <meta name="description" content="Save thousands on healthcare costs. Learn about ACA subsidy cliffs, health insurance alternatives, and strategies for self-employed individuals and families.">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        /* Header */
+        header {
+            background: #1a1a2e;
             color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        .container {
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #4fbdba;
+            text-decoration: none;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+        }
+        
+        nav a:hover {
+            color: #4fbdba;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 20px;
             text-align: center;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-            max-width: 500px;
-            margin: 0 20px;
         }
-        h1 {
+        
+        .hero h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
-            background: linear-gradient(45deg, #fff, #f0f0f0);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
-        .logo {
-            font-size: 5rem;
-            margin-bottom: 1rem;
-            animation: pulse 2s infinite;
-        }
-        p {
-            font-size: 1.2rem;
+        
+        .hero p {
+            font-size: 1.3rem;
             margin-bottom: 2rem;
-            opacity: 0.9;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
-        .email {
-            color: #ffd700;
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 1rem 2rem;
+            border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
-            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
-        .email:hover {
-            text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+        
+        /* Alert Box */
+        .alert-box {
+            background: #fff3cd;
+            border: 2px solid #ff0000;
+            padding: 1.5rem;
+            margin: 2rem auto;
+            max-width: 900px;
+            border-radius: 8px;
         }
-        .coming-soon {
-            font-size: 0.9rem;
-            opacity: 0.7;
-            margin-top: 2rem;
+        
+        .alert-box strong {
+            color: #856404;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2d3748;
+        }
+        
+        /* Article Grid */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        .article-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .article-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        
+        .article-card h3 {
+            color: #2d3748;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .article-card p {
+            color: #4a5568;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        
+        .article-card a {
+            color: #667eea;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .article-card a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Featured Section */
+        .featured-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 10px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+        
+        .featured-box h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .featured-box p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 2rem 20px;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        footer a {
+            color: #4fbdba;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            nav a {
+                margin-left: 1rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">🚧</div>
-        <h1>DailySpark</h1>
-        <p>We're making something amazing!</p>
-        <p>Our site is currently under construction while we build a better experience for you.</p>
-        <p class="coming-soon">Check back soon for helpful resources and tools!</p>
-        <p>Questions? <a href="mailto:info@dailyspark.info" class="email">info@dailyspark.info</a></p>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">💡 DailySpark</a>
+            <nav>
+                <a href="#articles">Articles</a>
+                <a href="#alternatives">Alternatives</a>
+                <a href="/privacy-policy.html">Privacy</a>
+                <a href="/terms-of-service.html">Terms</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Escape the Healthcare Cost Trap</h1>
+        <p>Discover how self-employed Americans are saving $10,000+ per year on healthcare without sacrificing quality care.</p>
+        <a href="https://www.awin1.com/cread.php?awinmid=114664&awinaffid=2516221&ued=https://myphysicianplan.com" target="_blank" rel="noopener" class="cta-button">Learn About MyPhysicianPlan →</a>
+    </section>
+    
+    <!-- Alert Box -->
+    <div class="alert-box">
+        <strong>⚠️ AFFILIATE DISCLOSURE:</strong> We are a participant in the AWIN affiliate program. We earn commissions when you purchase MyPhysicianPlan through our links. This costs you nothing extra but helps support our site. We only recommend products we believe will help our readers.
     </div>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <h2 class="section-title" id="articles">Must-Read Articles for the Self-Employed</h2>
+        
+        <!-- Articles Grid -->
+        <div class="articles-grid">
+            <div class="article-card">
+                <h3>The $34,000 Reality: High Deductibles</h3>
+                <p>$2,000/month premium + $10,000 deductible = $34,000 before insurance pays anything. The brutal math exposed.</p>
+                <a href="/10000-deductible-reality.html">Read Full Article →</a>
+            </div>
+            
+            <div class="article-card">
+                <h3>ACA Subsidy Cliff Calculator</h3>
+                <p>A single dollar of extra income can cost you $11,479 in lost subsidies. Learn how to avoid this trap.</p>
+                <a href="/aca-subsidy-cliff.html">Read Full Article →</a>
+            </div>
+            
+            <div class="article-card">
+                <h3>$47,000 Saved With One Call</h3>
+                <p>Real story: How one family saved $47,000 by switching from traditional insurance to an alternative.</p>
+                <a href="/47000-saved-one-call.html">Read Full Article →</a>
+            </div>
+            
+            <div class="article-card">
+                <h3>Gig Economy Health Crisis</h3>
+                <p>Why Uber, DoorDash, and freelance workers are trapped without affordable healthcare options.</p>
+                <a href="/gig-economy-health.html">Read Full Article →</a>
+            </div>
+            
+            <div class="article-card">
+                <h3>F-1 Student Insurance Nightmare</h3>
+                <p>International students forced to buy $3,000/year insurance that covers almost nothing.</p>
+                <a href="/f1-student-insurance.html">Read Full Article →</a>
+            </div>
+            
+            <div class="article-card">
+                <h3>December Income Panic</h3>
+                <p>How year-end bonuses and income can destroy your healthcare subsidies for the entire year.</p>
+                <a href="/december-income-panic.html">Read Full Article →</a>
+            </div>
+            
+            <div class="article-card">
+                <h3>Spouse Job Trap</h3>
+                <p>How a $15/hour part-time job cost one family $18,000 in lost healthcare subsidies.</p>
+                <a href="/spouse-job-trap.html">Read Full Article →</a>
+            </div>
+            
+            <div class="article-card">
+                <h3>Emergency Room Bankruptcy</h3>
+                <p>$5,000 ER bills on top of $2,000/month premiums. The emergency care crisis exposed.</p>
+                <a href="/emergency-room-bankruptcy.html">Read Full Article →</a>
+            </div>
+            
+            <div class="article-card">
+                <h3>Tax Deduction Guide</h3>
+                <p>Complete guide to health insurance tax deductions for self-employed individuals.</p>
+                <a href="/tax-deductions-guide.html">Read Full Article →</a>
+            </div>
+            
+            <div class="article-card">
+                <h3>Best States for Self-Employed</h3>
+                <p>State-by-state comparison of healthcare costs and options for freelancers.</p>
+                <a href="/best-states-self-employed-health-insurance.html">Read Full Article →</a>
+            </div>
+            
+            <div class="article-card">
+                <h3>HSA Strategies</h3>
+                <p>How to use Health Savings Accounts to save thousands on taxes and medical costs.</p>
+                <a href="/hsa-strategies-self-employed.html">Read Full Article →</a>
+            </div>
+            
+            <div class="article-card">
+                <h3>Prescription Drug Trap</h3>
+                <p>Why your "covered" medications still cost hundreds per month and what to do about it.</p>
+                <a href="/prescription-drug-trap.html">Read Full Article →</a>
+            </div>
+        </div>
+        
+        <p style="text-align: center; margin: 2rem 0;">
+            <a href="/all-articles.html" style="color: #667eea; font-weight: bold; font-size: 1.2rem;">View All 52 Articles →</a>
+        </p>
+        
+        <!-- Featured Alternative Section -->
+        <div class="featured-box" id="alternatives">
+            <h2>There IS a Better Way</h2>
+            <p>MyPhysicianPlan offers transparent healthcare pricing without deductibles, networks, or surprise bills.</p>
+            <ul style="text-align: left; max-width: 600px; margin: 0 auto 2rem; list-style: none;">
+                <li>✓ No deductibles or co-insurance</li>
+                <li>✓ Transparent upfront pricing</li>
+                <li>✓ Access to quality physicians</li>
+                <li>✓ Prescription discounts included</li>
+                <li>✓ Nationwide coverage</li>
+                <li>✓ No network restrictions</li>
+            </ul>
+            <a href="https://www.awin1.com/cread.php?awinmid=114664&awinaffid=2516221&ued=https://myphysicianplan.com" target="_blank" rel="noopener" class="cta-button">Get Started with MyPhysicianPlan →</a>
+        </div>
+        
+        <!-- Additional Resources -->
+        <h2 class="section-title">Popular Topics</h2>
+        <div class="articles-grid">
+            <div class="article-card">
+                <h3>Subsidy Cliff Calculator</h3>
+                <p>Calculate exactly where your income puts you at risk of losing thousands in subsidies.</p>
+                <a href="/calculate-your-cliff.html">Use Calculator →</a>
+            </div>
+            
+            <div class="article-card">
+                <h3>State Healthcare Programs</h3>
+                <p>Complete guide to state-specific programs for freelancers and self-employed individuals.</p>
+                <a href="/state-health-programs-freelancers.html">View Guide →</a>
+            </div>
+            
+            <div class="article-card">
+                <h3>Medical Debt Solutions</h3>
+                <p>What to do when medical bills threaten your financial stability.</p>
+                <a href="/w2-vs-1099-medical-debt.html">Get Help →</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 DailySpark | Helping the self-employed navigate healthcare</p>
+        <p>
+            <a href="/privacy-policy.html">Privacy Policy</a> | 
+            <a href="/terms-of-service.html">Terms of Service</a> | 
+            <a href="mailto:brice@dailyspark.com">Contact Us</a>
+        </p>
+        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+            DailySpark is operated by Jax Sod Inc., Jacksonville, Florida
+        </p>
+    </footer>
 </body>
 </html>
