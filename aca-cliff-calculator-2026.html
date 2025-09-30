@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 ACA Subsidy Cliff Calculator - Don't Lose $15,000 By Making $1 Too Much</title>
+    <meta name="description" content="Calculate your exact 2026 ACA subsidy cliff. See how much you'll lose if you earn $1 too much. Get actionable steps to stay safe for self-employed individuals.">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-809NFNY2M5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-809NFNY2M5');
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        header {
+            background: #1a1a2e;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #4fbdba;
+            text-decoration: none;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .hero {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #1a1a2e;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .danger-box {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .success-box {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .calculator-box {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+            font-size: 1.1rem;
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 12px;
+            font-size: 1.1rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus, select:focus {
+            outline: none;
+            border-color: #4fbdba;
+        }
+        
+        .btn {
+            background: #4fbdba;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #3da5a2;
+        }
+        
+        #results {
+            margin-top: 40px;
+        }
+        
+        .result-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        
+        .result-card h3 {
+            color: #1a1a2e;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .big-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #4fbdba;
+            margin: 20px 0;
+        }
+        
+        .danger-number {
+            color: #dc3545;
+        }
+        
+        .success-number {
+            color: #28a745;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .comparison-table th {
+            background: #f8f9fa;
+            font-weight: 600;
+        }
+        
+        .action-steps {
+            background: #e3f2fd;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        
+        .action-steps h4 {
+            color: #1976d2;
+            margin-bottom: 15px;
+        }
+        
+        .action-steps li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        
+        .cta-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .cta-box h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .btn-white {
+            background: white;
+            color: #667eea;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        
+        .btn-white:hover {
+            background: #f8f9fa;
+        }
+        
+        footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .affiliate-disclosure value="VA">Virginia</option>
+                        <option value="WA">Washington</option>
+                        <option value="WV">West Virginia</option>
+                        <option value="WI">Wisconsin</option>
+                        <option value="WY">Wyoming</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn">Calculate My 2026 Cliff Risk</button>
+            </form>
+
+            <div id="results" style="display: none;"></div>
+        </div>
+
+        <div class="affiliate-disclosure">
+            <strong>Affiliate Disclosure:</strong> This site contains affiliate links. If you click through and enroll in a plan, we may earn a commission at no cost to you.
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 DailySpark. All rights reserved.</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">Information for educational purposes only. Consult a licensed insurance agent or tax professional.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 2026 Federal Poverty Level (using 2025 FPL as baseline)
+        const FPL_2026 = {
+            1: 15060,
+            2: 20440,
+            3: 25820,
+            4: 31200,
+            5: 36580,
+            6: 41960,
+            7: 47340,
+            8: 52720
+        };
+
+        // Estimated average premium by age (national average for Silver plan)
+        const PREMIUM_BY_AGE = {
+            21: 350,
+            25: 380,
+            30: 420,
+            35: 480,
+            40: 540,
+            45: 650,
+            50: 820,
+            55: 950,
+            60: 1100,
+            64: 1300
+        };
+
+        document.getElementById('cliffCalculator').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const income = parseFloat(document.getElementById('income').value);
+            const householdSize = parseInt(document.getElementById('householdSize').value);
+            const age = parseInt(document.getElementById('age').value);
+            const state = document.getElementById('state').value;
+            
+            // Calculate FPL percentage
+            const fpl = FPL_2026[householdSize];
+            const fplPercentage = (income / fpl) * 100;
+            const cliff400 = fpl * 4;
+            
+            // Estimate premium based on age
+            let estimatedPremium = 650; // Default
+            for (let ageKey in PREMIUM_BY_AGE) {
+                if (age <= parseInt(ageKey)) {
+                    estimatedPremium = PREMIUM_BY_AGE[ageKey];
+                    break;
+                }
+            }
+            
+            // Adjust for household size
+            if (householdSize > 1) {
+                estimatedPremium = estimatedPremium * (1 + (householdSize - 1) * 0.5);
+            }
+            
+            // Calculate subsidies
+            let subsidy2025 = 0;
+            let subsidy2026 = 0;
+            const monthlyPremium = estimatedPremium;
+            const annualPremium = monthlyPremium * 12;
+            
+            // 2025 calculation (no cliff, 8.5% cap)
+            const maxPayment2025 = income * 0.085;
+            subsidy2025 = Math.max(0, annualPremium - maxPayment2025);
+            
+            // 2026 calculation (cliff returns at 400% FPL)
+            if (fplPercentage > 400) {
+                subsidy2026 = 0; // NO SUBSIDY if over 400%
+            } else {
+                // Simplified subsidy calculation for under 400%
+                let expectedContribution = 0;
+                if (fplPercentage < 150) expectedContribution = 0.02;
+                else if (fplPercentage < 200) expectedContribution = 0.04;
+                else if (fplPercentage < 250) expectedContribution = 0.06;
+                else if (fplPercentage < 300) expectedContribution = 0.085;
+                else expectedContribution = 0.095;
+                
+                const maxPayment2026 = income * expectedContribution;
+                subsidy2026 = Math.max(0, annualPremium - maxPayment2026);
+            }
+            
+            const subsidyLoss = subsidy2025 - subsidy2026;
+            const distanceFromCliff = cliff400 - income;
+            
+            // Generate results
+            displayResults(income, fplPercentage, cliff400, distanceFromCliff, subsidy2025, subsidy2026, subsidyLoss, monthlyPremium);
+        });
+
+        function displayResults(income, fplPercentage, cliff400, distanceFromCliff, subsidy2025, subsidy2026, subsidyLoss, monthlyPremium) {
+            const resultsDiv = document.getElementById('results');
+            let html = '';
+            
+            // Determine danger level
+            const isDanger = distanceFromCliff < 10000 && distanceFromCliff > 0;
+            const isOverCliff = distanceFromCliff < 0;
+            const isSafe = distanceFromCliff >= 10000;
+            
+            if (isOverCliff) {
+                html += `
+                    <div class="danger-box">
+                        <h3>🚨 YOU'RE OVER THE CLIFF!</h3>
+                        <p>Your income of <strong>$${income.toLocaleString()}</strong> is <strong>$${Math.abs(distanceFromCliff).toLocaleString()}</strong> OVER the 400% FPL limit of $${cliff400.toLocaleString()}.</p>
+                        <p style="font-size: 1.2rem; margin-top: 15px;"><strong>In 2026, you will lose ALL subsidies and pay full price!</strong></p>
+                    </div>
+                    
+                    <div class="result-card">
+                        <h3>Your Subsidy Loss in 2026:</h3>
+                        <div class="big-number danger-number">-$${Math.round(subsidyLoss).toLocaleString()}/year</div>
+                        <p>That's <strong>$${Math.round(subsidyLoss/12).toLocaleString()}/month</strong> MORE you'll pay!</p>
+                    </div>
+                `;
+            } else if (isDanger) {
+                html += `
+                    <div class="danger-box">
+                        <h3>⚠️ DANGER ZONE! YOU'RE CLOSE TO THE CLIFF!</h3>
+                        <p>You're only <strong>$${distanceFromCliff.toLocaleString()}</strong> away from losing <strong>$${Math.round(subsidy2025).toLocaleString()}</strong> in annual subsidies!</p>
+                        <p style="font-size: 1.2rem; margin-top: 15px;"><strong>Making just $${distanceFromCliff.toLocaleString()} more could cost you $${Math.round(subsidy2025).toLocaleString()}!</strong></p>
+                    </div>
+                `;
+            } else if (isSafe) {
+                html += `
+                    <div class="success-box">
+                        <h3>✅ You're Safe From The Cliff (For Now)</h3>
+                        <p>You're <strong>$${distanceFromCliff.toLocaleString()}</strong> below the 400% FPL cliff of $${cliff400.toLocaleString()}.</p>
+                        <p style="margin-top: 10px;">But keep reading to see how to STAY safe!</p>
+                    </div>
+                `;
+            }
+            
+            // Comparison table
+            html += `
+                <div class="result-card">
+                    <h3>2025 vs 2026 Comparison:</h3>
+                    <table class="comparison-table">
+                        <tr>
+                            <th></th>
+                            <th>2025 (Enhanced Subsidies)</th>
+                            <th>2026 (Cliff Returns)</th>
+                        </tr>
+                        <tr>
+                            <td><strong>Annual Subsidy</strong></td>
+                            <td style="color: #28a745;">$${Math.round(subsidy2025).toLocaleString()}</td>
+                            <td style="color: ${subsidy2026 > 0 ? '#28a745' : '#dc3545'};">$${Math.round(subsidy2026).toLocaleString()}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>You Pay Per Year</strong></td>
+                            <td>$${Math.round(monthlyPremium * 12 - subsidy2025).toLocaleString()}</td>
+                            <td style="color: #dc3545;">$${Math.round(monthlyPremium * 12 - subsidy2026).toLocaleString()}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Monthly Cost</strong></td>
+                            <td>$${Math.round((monthlyPremium * 12 - subsidy2025)/12).toLocaleString()}/month</td>
+                            <td style="color: #dc3545; font-weight: bold;">$${Math.round((monthlyPremium * 12 - subsidy2026)/12).toLocaleString()}/month</td>
+                        </tr>
+                    </table>
+                </div>
+            `;
+            
+            // Action steps
+            if (isDanger || isOverCliff) {
+                const neededReduction = Math.abs(distanceFromCliff) + 5000; // Add buffer
+                
+                html += `
+                    <div class="action-steps">
+                        <h4>🎯 HOW TO STAY UNDER THE CLIFF:</h4>
+                        <ul>
+                            <li><strong>Contribute to Solo 401(k):</strong> You can deduct up to $23,000 (2026 limit) which lowers your income. Contributing $${Math.min(neededReduction, 23000).toLocaleString()} would save you!</li>
+                            <li><strong>Max out HSA:</strong> $4,300 for individuals, $8,550 for families (2026 limits). This reduces your taxable income.</li>
+                            <li><strong>Time your income:</strong> If possible, delay invoices or defer income to next year.</li>
+                            <li><strong>Deduct business expenses:</strong> Make sure you're claiming ALL legitimate business deductions.</li>
+                            <li><strong>Consider SEP-IRA:</strong> You can contribute up to 25% of net self-employment income.</li>
+                        </ul>
+                        <p style="margin-top: 20px; font-style: italic;">By reducing your MAGI by just $${neededReduction.toLocaleString()}, you could save $${Math.round(subsidy2025).toLocaleString()}/year in subsidies!</p>
+                    </div>
+                `;
+            }
+            
+            // CTA for MyPhysicianPlan
+            html += `
+                <div class="cta-box">
+                    <h3>What If Traditional Insurance Is Too Expensive?</h3>
+                    <p>Even with subsidies, ACA plans can be pricey. MyPhysicianPlan offers an alternative:</p>
+                    <ul style="text-align: left; max-width: 500px; margin: 20px auto;">
+                        <li>✓ No income limits</li>
+                        <li>✓ Lower monthly costs</li>
+                        <li>✓ Access to telehealth, prescriptions, lab work</li>
+                        <li>✓ Perfect for healthy self-employed individuals</li>
+                    </ul>
+                    <a href="https://www.awin1.com/cread.php?awinmid=114664&awinaffid=YOUR_AFFILIATE_ID" target="_blank" class="btn-white">Get MyPhysicianPlan Quote →</a>
+                    <p style="font-size: 0.9rem; margin-top: 15px; opacity: 0.9;">Not insurance. A healthcare membership program.</p>
+                </div>
+            `;
+            
+            // Related articles
+            html += `
+                <div class="result-card">
+                    <h3>Learn More:</h3>
+                    <ul style="line-height: 2;">
+                        <li><a href="aca-subsidy-cliff.html">The $1 Mistake That Could Cost You $11,479</a></li>
+                        <li><a href="calculate-your-cliff.html">Your Exact 2026 Cliff Calculator</a></li>
+                        <li><a href="income-timing-for-subsidies.html">Income Timing Strategies for ACA Subsidies</a></li>
+                        <li><a href="retirement-contributions-lower-magi.html">How Retirement Contributions Lower Your MAGI</a></li>
+                    </ul>
+                </div>
+            `;
+            
+            resultsDiv.innerHTML = html;
+            resultsDiv.style.display = 'block';
+            
+            // Scroll to results
+            resultsDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    </script>
+</body>
+</html>
