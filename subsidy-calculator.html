@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free ACA Subsidy Calculator 2026 - Will You Hit The Cliff? - DailySpark</title>
+    <meta name="description" content="Calculate if you'll lose thousands in ACA subsidies in 2026. Free calculator shows exactly where the subsidy cliff will hit self-employed workers.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: #f8f9fa; }
+        
+        header { background: #1a1a2e; color: white; padding: 1rem 0; }
+        .header-content { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.8rem; font-weight: bold; color: #4fbdba; text-decoration: none; }
+        nav a { color: white; text-decoration: none; margin-left: 2rem; }
+        nav a:hover { color: #4fbdba; }
+        
+        .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 3rem 20px; text-align: center; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto; }
+        
+        .calculator-container { max-width: 800px; margin: -2rem auto 3rem; padding: 3rem; background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        
+        .input-group { margin-bottom: 1.5rem; }
+        .input-group label { display: block; font-weight: bold; margin-bottom: 0.5rem; color: #1a1a2e; }
+        .input-group input, .input-group select { width: 100%; padding: 0.75rem; border: 2px solid #e0e0e0; border-radius: 5px; font-size: 1rem; }
+        .input-group input:focus, .input-group select:focus { outline: none; border-color: #667eea; }
+        
+        .calculate-btn { width: 100%; padding: 1rem; background: #667eea; color: white; border: none; border-radius: 5px; font-size: 1.2rem; font-weight: bold; cursor: pointer; margin-top: 1rem; }
+        .calculate-btn:hover { background: #5568d3; }
+        
+        .results { margin-top: 2rem; padding: 2rem; border-radius: 10px; display: none; }
+        .results.danger { background: #fee; border: 3px solid #f00; }
+        .results.warning { background: #fff3cd; border: 3px solid #ffc107; }
+        .results.safe { background: #d4edda; border: 3px solid #28a745; }
+        
+        .results h2 { margin-bottom: 1rem; }
+        .results .big-number { font-size: 3rem; font-weight: bold; margin: 1rem 0; }
+        .results ul { margin-left: 2rem; margin-top: 1rem; }
+        .results li { margin-bottom: 0.5rem; }
+        
+        .cta-box { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 10px; margin: 2rem 0; text-align: center; }
+        .cta-box h3 { margin-bottom: 1rem; }
+        .cta-box a { display: inline-block; background: white; color: #667eea; padding: 1rem 2rem; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 1rem; }
+        
+        footer { background: #1a1a2e; color: white; padding: 2rem 20px; text-align: center; margin-top: 3rem; }
+        footer a { color: #4fbdba; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">💡 DailySpark</a>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/all-articles.html">Articles</a>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <h1>Will You Hit The 2026 ACA Subsidy Cliff?</h1>
+        <p>One extra dollar of income could cost you $11,479 in subsidies. Find out if you're at risk.</p>
+    </section>
+    
+    <div class="calculator-container">
+        <h2 style="margin-bottom: 2rem; color: #1a1a2e;">Calculate Your Subsidy Risk</h2>
+        
+        <div class="input-group">
+            <label>Your State</label>
+            <select id="state">
+                <option value="average">Average (US)</option>
+                <option value="high">High Cost State (NY, CA, MA)</option>
+                <option value="low">Low Cost State (FL, TX, AZ)</option>
+            </select>
+        </div>
+        
+        <div class="input-group">
+            <label>Your Age</label>
+            <input type="number" id="age" placeholder="35" min="18" max="64">
+        </div>
+        
+        <div class="input-group">
+            <label>Family Size</label>
+            <input type="number" id="familySize" placeholder="3" min="1" max="10">
+        </div>
+        
+        <div class="input-group">
+            <label>Expected Annual Income (2026)</label>
+            <input type="number" id="income" placeholder="75000" min="0">
+        </div>
+        
+        <button class="calculate-btn" onclick="calculateSubsidy()">Calculate My Risk →</button>
+        
+        <div id="results" class="results">
+            <!-- Results will appear here -->
+        </div>
+        
+        <div class="cta-box">
+            <h3>Tired of the Insurance Subsidy Game?</h3>
+            <p>Stop worrying about income limits and subsidy cliffs. See transparent healthcare pricing without the insurance middleman.</p>
+            <a href="https://www.awin1.com/cread.php?awinmid=114664&awinaffid=2516221&ued=https://myphysicianplan.com" target="_blank" rel="noopener">See Real Healthcare Pricing (No Deductibles) →</a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2025 DailySpark | Operated by Jax Sod Inc., Jacksonville, Florida</p>
+        <p><a href="/">Home</a> | <a href="/privacy-policy.html">Privacy</a> | <a href="/terms-of-service.html">Terms</a></p>
+    </footer>
+    
+    <script>
+    function calculateSubsidy() {
+        // Get inputs
+        const state = document.getElementById('state').value;
+        const age = parseInt(document.getElementById('age').value);
+        const familySize = parseInt(document.getElementById('familySize').value);
+        const income = parseInt(document.getElementById('income').value);
+        
+        // Validate
+        if (!age || !familySize || !income) {
+            alert('Please fill in all fields');
+            return;
+        }
+        
+        // 2026 Federal Poverty Level (estimated)
+        const fpl2026 = 15060 + (5380 * (familySize - 1));
+        
+        // Calculate percentage of FPL
+        const fplPercent = (income / fpl2026) * 100;
+        
+        // Subsidy cliff is at 400% FPL (subsidies disappear completely)
+        const cliffIncome = fpl2026 * 4;
+        const distanceToCliff = cliffIncome - income;
+        
+        // Estimate premium costs
+        let basePremium;
+        if (state === 'high') basePremium = 800;
+        else if (state === 'low') basePremium = 500;
+        else basePremium = 650;
+        
+        // Age adjustment
+        const ageMultiplier = age < 30 ? 0.8 : age < 45 ? 1.0 : age < 55 ? 1.3 : 1.6;
+        const monthlyPremium = basePremium * familySize * ageMultiplier;
+        const annualPremium = monthlyPremium * 12;
+        
+        // Calculate subsidy if under 400% FPL
+        let annualSubsidy = 0;
+        if (fplPercent < 400) {
+            // Simplified subsidy calculation
+            const maxContribution = income * 0.085; // 8.5% cap
+            annualSubsidy = Math.max(0, annualPremium - maxContribution);
+        }
+        
+        // Determine risk level
+        let riskClass, riskTitle, riskMessage, recommendations;
+        
+        if (distanceToCliff < 5000 && distanceToCliff > 0) {
+            riskClass = 'danger';
+            riskTitle = '🚨 EXTREME RISK - You\'re At The Cliff Edge!';
+            riskMessage = `You're only $${distanceToCliff.toLocaleString()} away from losing $${Math.round(annualSubsidy).toLocaleString()} in annual subsidies. A small bonus or extra income could trigger a massive loss.`;
+            recommendations = [
+                `Max out retirement contributions to lower your MAGI`,
+                `Consider income timing strategies before year-end`,
+                `Research alternatives like MyPhysicianPlan that don't depend on subsidies`,
+                `Set up income alerts to track where you stand monthly`
+            ];
+        } else if (distanceToCliff < 15000 && distanceToCliff > 0) {
+            riskClass = 'warning';
+            riskTitle = '⚠️ MODERATE RISK - Watch Your Income Carefully';
+            riskMessage = `You're $${distanceToCliff.toLocaleString()} from the subsidy cliff. You currently receive about $${Math.round(annualSubsidy).toLocaleString()}/year in subsidies.`;
+            recommendations = [
+                `Monitor your income quarterly to avoid surprises`,
+                `Plan retirement contributions strategically`,
+                `Research backup healthcare options now, not in December`,
+                `Consider whether the subsidy game is worth playing`
+            ];
+        } else if (income > cliffIncome) {
+            riskClass = 'danger';
+            riskTitle = '💸 You\'re OVER The Cliff!';
+            riskMessage = `Your income is above 400% FPL. You receive $0 in subsidies and pay full price: $${Math.round(annualPremium).toLocaleString()}/year for insurance.`;
+            recommendations = [
+                `You're paying full retail for insurance - alternatives may be cheaper`,
+                `Consider Direct Primary Care + catastrophic coverage`,
+                `Look at MyPhysicianPlan for transparent pricing`,
+                `Calculate if paying full price is worth it vs alternatives`
+            ];
+        } else {
+            riskClass = 'safe';
+            riskTitle = '✅ Currently Safe From The Cliff';
+            riskMessage = `You're $${distanceToCliff.toLocaleString()} from the subsidy cliff. You receive about $${Math.round(annualSubsidy).toLocaleString()}/year in subsidies.`;
+            recommendations = [
+                `You're in good shape for 2026, but subsidies expire in 2026`,
+                `Start planning now for potential subsidy changes`,
+                `Research alternatives before you need them`,
+                `Don't assume subsidies will be extended`
+            ];
+        }
+        
+        // Display results
+        const resultsDiv = document.getElementById('results');
+        resultsDiv.className = `results ${riskClass}`;
+        resultsDiv.style.display = 'block';
+        resultsDiv.innerHTML = `
+            <h2>${riskTitle}</h2>
+            <p style="font-size: 1.2rem; margin: 1rem 0;">${riskMessage}</p>
+            
+            <div style="background: rgba(0,0,0,0.05); padding: 1.5rem; border-radius: 5px; margin: 1.5rem 0;">
+                <strong>Your Numbers:</strong>
+                <ul style="margin-top: 0.5rem;">
+                    <li>Estimated Premium: $${Math.round(monthlyPremium).toLocaleString()}/month ($${Math.round(annualPremium).toLocaleString()}/year)</li>
+                    <li>Your Subsidy: $${Math.round(annualSubsidy).toLocaleString()}/year</li>
+                    <li>Your FPL Percentage: ${Math.round(fplPercent)}%</li>
+                    <li>Subsidy Cliff Income: $${Math.round(cliffIncome).toLocaleString()}</li>
+                </ul>
+            </div>
+            
+            <h3 style="margin-top: 1.5rem;">What You Should Do:</h3>
+            <ul>
+                ${recommendations.map(r => `<li>${r}</li>`).join('')}
+            </ul>
+        `;
+        
+        // Scroll to results
+        resultsDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+    </script>
+</body>
+</html>
