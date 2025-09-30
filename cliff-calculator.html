@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-809NFNY2M5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-809NFNY2M5');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 ACA Subsidy Cliff Calculator - Don't Lose $15,000 By Earning $1 Too Much</title>
+    <meta name="description" content="Free calculator shows if you're at risk of losing thousands in ACA subsidies in 2026. Find out if you're in the danger zone and how to protect yourself.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        .pulse-border {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100">
+    <!-- Header -->
+    <header class="bg-gray-900 text-white py-4 px-6 shadow-lg">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-blue-400 hover:text-blue-300">💡 DailySpark</a>
+            <nav class="space-x-6">
+                <a href="/" class="hover:text-blue-400">Home</a>
+                <a href="/all-articles.html" class="hover:text-blue-400">Articles</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="max-w-5xl mx-auto px-4 py-8">
+        <!-- Main Title -->
+        <div class="bg-white rounded-2xl shadow-2xl p-8 mb-6">
+            <div class="flex items-start gap-4 mb-4">
+                <div class="text-5xl">⚠️</div>
+                <div>
+                    <h1 class="text-4xl font-bold text-gray-900 mb-2">
+                        2026 ACA Subsidy Cliff Calculator
+                    </h1>
+                    <p class="text-xl text-gray-700 mb-2">
+                        Don't lose <span class="font-bold text-red-600">$10,000-$20,000</span> by earning just <span class="font-bold">$1 too much</span>
+                    </p>
+                    <p class="text-gray-600">
+                        The subsidy cliff returns January 1, 2026. Find out if you're in danger.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Calculator Form -->
+        <div class="bg-white rounded-2xl shadow-2xl p-8 mb-6">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Calculate Your 2026 Risk</h2>
+            
+            <form id="calculatorForm" class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">
+                            💵 Your 2026 Income (Before Deductions)
+                        </label>
+                        <input
+                            type="number"
+                            id="income"
+                            placeholder="65000"
+                            required
+                            class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none text-lg"
+                        />
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">
+                            🎂 Your Age
+                        </label>
+                        <input
+                            type="number"
+                            id="age"
+                            placeholder="45"
+                            required
+                            class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none text-lg"
+                        />
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">
+                            👨‍👩‍👧‍👦 Family Size
+                        </label>
+                        <select
+                            id="familySize"
+                            class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none text-lg"
+                        >
+                            <option value="1">1 person</option>
+                            <option value="2">2 people</option>
+                            <option value="3">3 people</option>
+                            <option value="4">4 people</option>
+                            <option value="5">5 people</option>
+                            <option value="6">6 people</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">
+                            📍 State
+                        </label>
+                        <select
+                            id="state"
+                            class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none text-lg"
+                        >
+                            <option value="FL">Florida</option>
+                            <option value="TX">Texas</option>
+                            <option value="CA">California</option>
+                            <option value="NY">New York</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button
+                    type="submit"
+                    class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg text-xl transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                >
+                    Calculate My 2026 Costs
+                </button>
+            </form>
+        </div>
+
+        <!-- Results Container -->
+        <div id="results" class="hidden"></div>
+    </div>
+
+    <!-- Affiliate Disclosure -->
+    <div class="max-w-5xl mx-auto px-4 pb-8">
+        <div class="bg-yellow-50 border-2 border-yellow-400 rounded-xl p-4 text-sm text-gray-700">
+            <strong>⚠️ AFFILIATE DISCLOSURE:</strong> We earn commissions when you purchase MyPhysicianPlan through our links. This costs you nothing extra but helps support our site.
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 px-6 mt-12">
+        <div class="max-w-5xl mx-auto text-center">
+            <p class="mb-2">© 2025 DailySpark | Helping the self-employed navigate healthcare</p>
+            <p class="text-sm opacity-75">
+                <a href="/privacy-policy.html" class="hover:text-blue-400">Privacy</a> | 
+                <a href="/terms-of-service.html" class="hover:text-blue-400">Terms</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const fplLevels = {
+            1: 15060, 2: 20440, 3: 25820, 4: 31200, 
+            5: 36580, 6: 41960, 7: 47340, 8: 52720
+        };
+
+        document.getElementById('calculatorForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            calculate();
+        });
+
+        function calculate() {
+            const income = parseFloat(document.getElementById('income').value);
+            const age = parseInt(document.getElementById('age').value);
+            const familySize = parseInt(document.getElementById('familySize').value);
+            
+            if (!income || !age) {
+                alert('Please enter your income and age');
+                return;
+            }
+
+            const fpl = fplLevels[familySize] || 15060;
+            const fpl400 = fpl * 4;
+            const percentOfFPL = Math.round((income / fpl) * 100);
+            
+            // Estimate monthly premium
+            const basePremium = 450;
+            const ageFactor = age < 30 ? 0.8 : age < 40 ? 1.0 : age < 50 ? 1.3 : age < 60 ? 1.8 : 2.5;
+            const monthlyPremium = basePremium * ageFactor * familySize * 0.9;
+            
+            // 2025 calculation
+            let subsidy2025, payment2025;
+            if (income <= fpl * 1.5) {
+                payment2025 = 0;
+                subsidy2025 = monthlyPremium;
+            } else if (income <= fpl * 4) {
+                const percentage = 2 + (percentOfFPL / 100) * 6.5;
+                payment2025 = (income / 12) * (percentage / 100);
+                subsidy2025 = monthlyPremium - payment2025;
+            } else {
+                const maxPayment = (income / 12) * 0.085;
+                if (monthlyPremium > maxPayment) {
+                    payment2025 = maxPayment;
+                    subsidy2025 = monthlyPremium - payment2025;
+                } else {
+                    payment2025 = monthlyPremium;
+                    subsidy2025 = 0;
+                }
+            }
+            
+            // 2026 calculation
+            let subsidy2026, payment2026;
+            if (income > fpl400) {
+                payment2026 = monthlyPremium;
+                subsidy2026 = 0;
+            } else if (income <= fpl * 1.5) {
+                payment2026 = 0;
+                subsidy2026 = monthlyPremium;
+            } else {
+                const percentage = 2 + (percentOfFPL / 100) * 7.5;
+                payment2026 = (income / 12) * (percentage / 100);
+                subsidy2026 = monthlyPremium - payment2026;
+            }
+            
+            payment2025 = Math.max(0, payment2025);
+            payment2026 = Math.max(0, payment2026);
+            subsidy2025 = Math.max(0, subsidy2025);
+            subsidy2026 = Math.max(0, subsidy2026);
+            
+            const yearlyIncrease = (payment2026 - payment2025) * 12;
+            const distanceFromCliff = fpl400 - income;
+            const isDanger = distanceFromCliff > 0 && distanceFromCliff < 10000;
+            const overCliff = distanceFromCliff < 0;
+            
+            displayResults({
+                payment2025, payment2026, subsidy2025, subsidy2026,
+                yearlyIncrease, fpl400, distanceFromCliff, isDanger, overCliff, percentOfFPL, income
+            });
+        }
+
+        function displayResults(r) {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.classList.remove('hidden');
+            
+            let html = '';
+            
+            // Danger warning
+            if (r.isDanger) {
+                html += `
+                    <div class="bg-red-50 border-4 border-red-500 rounded-2xl shadow-2xl p-8 mb-6 pulse-border">
+                        <div class="flex items-start gap-4">
+                            <div class="text-5xl">⚠️</div>
+                            <div>
+                                <h3 class="text-3xl font-bold text-red-900 mb-3">
+                                    DANGER ZONE! You're $${Math.round(r.distanceFromCliff).toLocaleString()} from the cliff!
+                                </h3>
+                                <p class="text-xl text-red-800 mb-4">
+                                    If you earn $${Math.round(r.distanceFromCliff + 1).toLocaleString()} more in 2026, 
+                                    you'll lose <span class="font-bold">$${Math.round(r.subsidy2026 * 12).toLocaleString()}</span> in subsidies!
+                                </p>
+                                <div class="bg-white rounded-lg p-6">
+                                    <p class="font-bold text-gray-900 text-lg mb-3">HOW TO STAY SAFE:</p>
+                                    <ul class="space-y-2 text-gray-700 text-lg">
+                                        <li>✅ Contribute $${Math.round(r.distanceFromCliff + 2000).toLocaleString()} to Solo 401(k)</li>
+                                        <li>✅ OR max out your HSA contribution ($4,300 individual / $8,550 family)</li>
+                                        <li>✅ OR carefully time December income</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            if (r.overCliff) {
+                html += `
+                    <div class="bg-orange-50 border-4 border-orange-500 rounded-2xl shadow-2xl p-8 mb-6">
+                        <h3 class="text-3xl font-bold text-orange-900 mb-3">
+                            ⚠️ You're Over The Cliff
+                        </h3>
+                        <p class="text-xl text-orange-800">
+                            Your income is $${Math.abs(Math.round(r.distanceFromCliff)).toLocaleString()} over the limit. 
+                            You'll pay <span class="font-bold">FULL PRICE</span> for insurance in 2026.
+                        </p>
+                    </div>
+                `;
+            }
+            
+            // Comparison
+            html += `
+                <div class="bg-white rounded-2xl shadow-2xl p-8 mb-6">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">2025 vs 2026 Comparison</h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div class="bg-green-50 rounded-xl p-6 border-4 border-green-300">
+                            <div class="text-sm font-bold text-green-700 mb-2">2025 (Current Rules)</div>
+                            <div class="text-4xl font-bold text-green-900 mb-2">
+                                $${Math.round(r.payment2025).toLocaleString()}/mo
+                            </div>
+                            <div class="text-lg text-green-700">
+                                Subsidy: $${Math.round(r.subsidy2025).toLocaleString()}/mo
+                            </div>
+                        </div>
+
+                        <div class="bg-red-50 rounded-xl p-6 border-4 border-red-300">
+                            <div class="text-sm font-bold text-red-700 mb-2">2026 (Cliff Returns)</div>
+                            <div class="text-4xl font-bold text-red-900 mb-2">
+                                $${Math.round(r.payment2026).toLocaleString()}/mo
+                            </div>
+                            <div class="text-lg text-red-700">
+                                Subsidy: $${Math.round(r.subsidy2026).toLocaleString()}/mo
+                            </div>
+                        </div>
+                    </div>
+
+                    ${r.yearlyIncrease > 0 ? `
+                        <div class="bg-gray-100 rounded-xl p-6 text-center">
+                            <p class="text-gray-700 text-xl mb-2">
+                                Your costs will increase by
+                            </p>
+                            <p class="text-5xl font-bold text-red-600">
+                                $${Math.round(r.yearlyIncrease).toLocaleString()}/year
+                            </p>
+                        </div>
+                    ` : ''}
+                </div>
+
+                <!-- Key Info -->
+                <div class="bg-blue-50 rounded-2xl shadow-2xl p-8 mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Key Information</h3>
+                    <div class="space-y-2 text-gray-700 text-lg">
+                        <p><span class="font-bold">Your Income:</span> $${Math.round(r.income).toLocaleString()} (${r.percentOfFPL}% of poverty level)</p>
+                        <p><span class="font-bold">The 2026 Cliff:</span> $${Math.round(r.fpl400).toLocaleString()}</p>
+                        <p><span class="font-bold">Distance from Cliff:</span> $${Math.abs(Math.round(r.distanceFromCliff)).toLocaleString()} ${r.overCliff ? 'over' : 'under'}</p>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl shadow-2xl p-8 text-white">
+                    <h3 class="text-3xl font-bold mb-4">Can't Afford ACA Insurance?</h3>
+                    <p class="text-xl mb-6">
+                        If traditional insurance is too expensive, there are alternatives that cost 50-70% less.
+                    </p>
+                    <a
+                        href="https://www.awin1.com/cread.php?awinmid=114664&awinaffid=2516221&ued=https://myphysicianplan.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-block bg-white text-blue-600 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-all text-xl shadow-lg"
+                    >
+                        Get a Free Quote from MyPhysicianPlan →
+                    </a>
+                    <p class="text-sm mt-4 opacity-90">
+                        *Not insurance - healthcare membership with direct primary care, telehealth, prescriptions & lab tests
+                    </p>
+                </div>
+
+                <!-- Educational -->
+                <div class="bg-white rounded-2xl shadow-2xl p-8 mt-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Understanding the 2026 Subsidy Cliff</h3>
+                    <div class="space-y-4 text-gray-700 text-lg leading-relaxed">
+                        <p>
+                            From 2021-2025, enhanced subsidies meant you could earn ANY amount and still get help. 
+                            That changes January 1, 2026.
+                        </p>
+                        <p>
+                            <span class="font-bold">The cliff returns:</span> Earn even $1 over 400% of poverty level = 
+                            lose ALL subsidies. That's often $10,000-$20,000 per year!
+                        </p>
+                        <p>
+                            Self-employed? You have options to lower your income legally: Solo 401(k), SEP IRA, HSA contributions.
+                        </p>
+                    </div>
+                </div>
+            `;
+            
+            resultsDiv.innerHTML = html;
+            resultsDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    </script>
+</body>
+</html>
